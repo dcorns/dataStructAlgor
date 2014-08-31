@@ -139,3 +139,13 @@ console.log(names.next());
 console.log(names.next());
 console.log(names.previous());
 console.log(names.previous());
+
+//Interesting use of for statement to iterate the list
+//Front to end
+for (names.front(); names.hasNext();) {
+  console.log(names.next());
+}
+//End to front (not outputting last element)
+for (names.end(); names.hasPrevious();) {
+  console.log(names.previous());
+}
