@@ -3,6 +3,9 @@
 //video rental system example
 var kiosk = {};
 var fs = require('fs');
+var movieList = require('./list');
+
+//var movieList = new List();
 var movies = "";
 
 //asynchronous call
