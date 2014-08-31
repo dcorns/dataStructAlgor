@@ -1,0 +1,14 @@
+lnpm started
+Sat Aug 30 22:39:51 PDT 2014
+[1734] paramcount2
+[1735] params=fs modparam=
+[1;34m[1730] Swtich Statement Begins 1=install[0m
+[252] check3() modparam=
+[1;34m[219] install() pkgin=fs[0m
+[1;34m[279] setpackage() pkgin=fs  [0m
+[1;34m[580] getPackageCount() pkgin=fs  [0m
+[1;34m[260] splitdirnames()  [0m
+[48] setupDirs()  
+[1;34m[580] getPackageCount() pkgin=fs  [0m
+[1;34m[260] splitdirnames()  [0m
+[318] Package fs not found locally or remotely
