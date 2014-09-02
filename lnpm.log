@@ -1,14 +1,20 @@
 lnpm started
-Sat Aug 30 22:39:51 PDT 2014
-[1734] paramcount2
-[1735] params=fs modparam=
+Mon Sep  1 22:27:15 PDT 2014
+[1734] paramcount3
+[1735] params=mocha modparam=--save-dev
 [1;34m[1730] Swtich Statement Begins 1=install[0m
-[252] check3() modparam=
-[1;34m[219] install() pkgin=fs[0m
-[1;34m[279] setpackage() pkgin=fs  [0m
-[1;34m[580] getPackageCount() pkgin=fs  [0m
+[252] check3() modparam=--save-dev
+[1;34m[219] install() pkgin=mocha[0m
+[1;34m[279] setpackage() pkgin=mocha  [0m
+[1;34m[580] getPackageCount() pkgin=mocha  [0m
 [1;34m[260] splitdirnames()  [0m
-[48] setupDirs()  
-[1;34m[580] getPackageCount() pkgin=fs  [0m
-[1;34m[260] splitdirnames()  [0m
-[318] Package fs not found locally or remotely
+[294] pkgcount=2 pkgin=mocha found locally
+[1;34m[337] checkpackagejson()[0m
+[1;34m[483] parcepkgjson()[0m
+[1;34m[536] makeDepList() depobj[@]="dependencies": { "chai": "1.9.1" }  [0m
+[1;34m[551] makeDevList()[0m
+[1;34m[348] checkpackageDep() pkgin="mocha" pkgVin="1.21.4" deplist[@]="chai"[0m
+[1;34m[369] checkpackageDev() pkgin="mocha" [0m
+[1;34m[432] addpackageDev() pkgin=mocha[0m
+[439] havedevdependencies=false
+[1;34m[474] writepackagejson()[0m

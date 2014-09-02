@@ -3,29 +3,37 @@
 //video rental system example
 var kiosk = {};
 var fs = require('fs');
-var movieList = require('./list');
+var List = require('./list');
 
-var movies = createArr('films.txt', function (stuff){
-  for (var i = 0; i < movies.length; i++){
-    movieList.append(stuff[i]);
-  }
-});
+var customer = new List();
 
-function createArr(file) {
   //asynchronous call
-  fs.readFile(file,'utf8',function(err, data){
+  fs.readFile('films.txt','utf8',function(err, data){
     if (err) throw err;
     var arr = data.split('\n');
     for (var i = 0; i < arr.length; i++) {
       arr[i] = arr[i].trim();
     }
     console.log(arr);
-    return arr;
   });
-}
 
-function displayList(list){
-  for (list.front(); list.hasNext();){
-    console.log(list.next());
+
+
+kiosk.checkOut = function(name, movie, movieList, customerList) {
+  if(movieList.contains(movie)){
+    var c = new Customer(name, movie);
+    customerList.append(c);
+    movieList.remove(movie);
   }
-}
+  else{
+    console.log(movie + 'is not available');
+  }
+};
+
+kiosk.test = function(){
+  console.log('Available movies: \n');
+  kiosk.displayList(movieList);
+  kiosk.checkOut('Lisa Corns', 'The Godfather', movieList, customers);
+  console.log("\nCustomer Rentals: \n");
+  kiosk.displayList(customers);
+};

@@ -1,7 +1,7 @@
 'use strict';
 //A list class
 //Based on Data Structures and Algorithms with JavaScript, by Michael McMillian
-function List() {
+function list() {
   this.listSize = 0;
   this.pos = 0;
   this.dataStore = [];
@@ -58,7 +58,7 @@ function List() {
 
   function insert(element, after) {
     var insertPos = this.find(after);
-    if (insertpos > -1) {
+    if (insertPos > -1) {
       this.dataStore.splice(insertPos + 1, 0, element);
       this.listSize++;
       return true;
@@ -122,7 +122,7 @@ function List() {
   }
 
   function currPos() {
-    return pos;
+    return this.pos;
   }
 
-module.exports = new List();
+module.exports = list;

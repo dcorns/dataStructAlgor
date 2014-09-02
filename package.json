@@ -1,0 +1,25 @@
+{
+"name": "dataStructAlgor",
+"version": "1.0.0",
+"description": "dataStructAlgor ===============",
+"main": "film.js",
+"scripts": {
+"test": "echo \"Error: no test specified\" && exit 1"
+},
+"repository": {
+"type": "git",
+"url": "https://github.com/dcorns/dataStructAlgor"
+},
+"author": "",
+"license": "ISC",
+"bugs": {
+"url": "https://github.com/dcorns/dataStructAlgor/issues"
+},
+"homepage": "https://github.com/dcorns/dataStructAlgor",
+"dependencies": {
+"chai": "1.9.1"
+},
+"devDependencies": {
+"mocha": "1.21.4"
+}
+}
