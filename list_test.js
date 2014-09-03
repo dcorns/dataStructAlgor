@@ -74,6 +74,7 @@ describe('List psudoclass', function(){
 
   it('keeps tracks and moves cursor position', function(){
     var ls= new List();
+    expect(ls.pos).to.be.eq(-1);
     ls.append('One');
     ls.append('Two');
     ls.append('Three');
@@ -87,6 +88,21 @@ describe('List psudoclass', function(){
     ls.next();
     expect(ls.pos).to.be.eq(2);
   });
+
+  it('return the cursor position', function(){
+    var ls = new List();
+    expect(ls.currPos()).to.be.eq(ls.pos);
+  });
+
+  it('can return the length of list', function(){
+    var ls = new List();
+    expect(ls.length()).to.be.eq(0);
+    ls.append('One');
+    ls.append('Two');
+    ls.append('Three');
+    expect(ls.length()).to.be.eq(3);
+  })
+
 
 
 });

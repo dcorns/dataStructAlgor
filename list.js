@@ -3,7 +3,7 @@
 //Based on Data Structures and Algorithms with JavaScript, by Michael McMillian
 function list() {
   this.listSize = 0;
-  this.pos = 0;
+  this.pos = -1;
   this.dataStore = [];
   this.clear = clear;
   this.find = find;
@@ -17,7 +17,6 @@ function list() {
   this.next = next;
   this.hasPrevious = hasPrevious;
   this.hasNext = hasNext;
-  this.length = length;
   this.currPos = currPos;
   this.moveTo = moveTo;
   this.getElement = getElement;
@@ -26,6 +25,7 @@ function list() {
 }
   function append(element) {
     this.dataStore[this.listSize++] = element;
+    this.pos++;
   }
 
 //helper function
