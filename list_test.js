@@ -35,7 +35,7 @@ describe('List psudoclass', function(){
     expect(ls.dataStore).to.be.empty;
   });
 
-  it('can find list item\'s index by contence',function(){
+  it('can find list item\'s index by content',function(){
     var ls = new List();
     ls.append('List Item');
     expect(ls.find('List Item')).to.be.eq(0);
@@ -101,8 +101,15 @@ describe('List psudoclass', function(){
     ls.append('Two');
     ls.append('Three');
     expect(ls.length()).to.be.eq(3);
-  })
+  });
 
-
+  it('can return results for contains element search', function(){
+    var ls = new List();
+    ls.append('One');
+    ls.append('Two');
+    ls.append('Three');
+    expect(ls.contains('Two')).to.be.eq(true);
+    expect(ls.contains('Four')).to.be.eq(false);
+  });
 
 });
